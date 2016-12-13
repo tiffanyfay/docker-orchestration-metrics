@@ -61,7 +61,7 @@ ipv4 = open("/tmp/ipv4").read()
 
 # Add a "docker" user with password "training"
 system("sudo useradd -d /home/docker -m -s /bin/bash docker")
-system("echo docker:training | sudo chpasswd")
+system("echo docker:ephemeral | sudo chpasswd")
 
 # Helper for Docker prompt.
 system("""sudo tee /usr/local/bin/docker-prompt <<SQRL
